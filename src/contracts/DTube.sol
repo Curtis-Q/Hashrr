@@ -5,11 +5,12 @@ contract DTube {
   string public name = "DTube";
   mapping(uint => Video) public videos;
 
+  //Create data types
   struct Video {
-    uint id;
-    string hash;
-    string title;
-    address author;
+    uint id; // video count
+    string hash; //IPFS video hash
+    string title; // Title
+    address author; // User wallet address
   }
 
   event VideoUploaded(

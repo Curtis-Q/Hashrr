@@ -3,6 +3,8 @@ require('babel-polyfill');
 require('dotenv').config();
 const HDWalletProvider = require("@truffle/hdwallet-provider")
 
+
+
 module.exports = {
   networks: {
     development: {
@@ -10,15 +12,16 @@ module.exports = {
       port: 7545,
       network_id: "*"
     },
-    matic: {
-      provider: () => new HDWalletProvider(process.env.MNEMONIC, `https://rpc-mumbai.maticvigil.com/v1/bd76d9f2e2c3993bbfef0082f25c30d017fc1feb`),
+    /* matic: {
+      provider: () => new HDWalletProvider(process.env.MNEMONIC, 
+      `https://rpc-mumbai.matic.today`),
       network_id: 80001,
       confirmations: 2,
       timeoutBlocks: 200,
       skipDryRun: true,
       gas: 6000000,
       gasPrice: 10000000000,
-    },
+    },*/
     rinkeby: {
       provider: function () {
         return new HDWalletProvider(
@@ -29,7 +32,7 @@ module.exports = {
       network_id: 4,
       gas: 6000000,
       gasPrice: 10000000000,
-    },
+    },/*
     ropsten: {
       provider: function() {
         return new HDWalletProvider(
@@ -53,12 +56,13 @@ module.exports = {
       timeoutBlocks: 200,
       gas: 5000000,
       gasPrice: 25000000000
-    },
+    },*/
   },
   contracts_directory: './src/contracts/',
   contracts_build_directory: './src/abis/',
   compilers: {
     solc: {
+      
       optimizer: {
         enabled: true,
         runs: 200

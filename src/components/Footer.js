@@ -33,7 +33,7 @@ export default function Footer() {
           <hr/>
           <div className="text-center p-4">
             © 2021 Copyright 
-            <a className="text-reset fw-bold" href="/"> DTube</a>
+            <a className="text-reset fw-bold" href="/"> Hashrr</a>
           </div>
         </section>
       </div>
